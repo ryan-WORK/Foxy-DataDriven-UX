@@ -238,6 +238,30 @@ return dataset.map((column,i)=> {
    </tr>
     </tbody>
     </table>
+          { this.props.tableCustomPaginate === true?
+              <table className={styles.table}>
+                  <tbody>
+                  <tr>
+                      <td>
+                          <button>Back</button>
+                          <button>Forward</button>
+                      </td>
+                      <td>
+
+                      </td>
+                      <td>
+                          <div>
+                              1,
+                              2
+                          </div>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table> :
+              <div>
+                  {/*Table No Custom*/}
+              </div>
+          }
       </div>
     );
   }
@@ -335,7 +359,7 @@ return dataset.map((column,i)=> {
     return (
       <div>
           {
-              this.props.makePaginate === true? this.renderPagination() : this.renderNoPagination()
+              this.props.makePaginate === true && this.props.items.length > 10? this.renderPagination() : this.renderNoPagination()
           }
       </div>
     );

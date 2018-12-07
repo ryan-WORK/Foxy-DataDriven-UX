@@ -10,7 +10,11 @@ const propTypes = {
 
 export default class FoxyColumn extends Component {
     render() {
-        return ;
+        return(
+            <div>
+
+            </div>
+        );
     }
 }
 FoxyColumn.propTypes = propTypes;
