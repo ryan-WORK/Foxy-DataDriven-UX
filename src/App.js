@@ -131,9 +131,10 @@ componentDidMount() {
                <FoxyTables tableCustomPaginate={false}
                            makePaginate={true}
                            items={dataProps}
-                           bottomTableStyle={sb}
-                           rowStyle={rs}
-                           headerStyle={styles}>
+                           // bottomTableStyle={sb}
+                           // rowStyle={rs}
+                           // headerStyle={styles}
+                   >
               <FoxyColumn id={'jobt'}
                           canSort={true}
                           colTitle={'Job Title'}

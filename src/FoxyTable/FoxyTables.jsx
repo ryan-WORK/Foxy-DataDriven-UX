@@ -8,7 +8,9 @@ const propTypes = {
     tableCustomPaginate: PropTypes.bool,
     headerStyle: PropTypes.object,
     makePaginate: PropTypes.bool,
-    initialPage: PropTypes.number
+    initialPage: PropTypes.number,
+    bottomTableStyle: PropTypes.object,
+    rowStyle: PropTypes.object
 };
 
 const defaultProps = {
@@ -20,12 +22,11 @@ export default class FoxyTables extends Component {
         super(props);
         this.state = { pager: {}, pageOfItems:[], tempData:[]};
         this.onChangePage = this.onChangePage.bind(this);
-        // TODO: implement
         this.compareBy = this.compareBy.bind(this);
         this.sortBy = this.sortBy.bind(this);
     }
-// TODO: implement
-compareBy(key) {
+
+    compareBy(key) {
       console.log("compare by", key);
     return function (a, b) {
         console.log("compare", a,b);
@@ -160,28 +161,28 @@ sortBy(key, stateData) {
 const tableHeaders = tOg.map((column,i)=> {
         if (!column.hidden){
             if(column.canSort){
-               return <th onClick={()=>this.sortBy(column.id, this.state.pageOfItems)} key={i}>{column.colTitle} <svg width={'10'} height={'10'} role="img" viewBox="0 0 24 24">
+               return (<th onClick={()=>this.sortBy(column.id, this.state.pageOfItems)} key={i}>{column.colTitle} <svg width={'10'} height={'10'} role="img" viewBox="0 0 24 24">
                    <title>
                        Strava icon
                    </title>
                    <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/>
                </svg>
-               </th>
+               </th>)
             }
             if(!column.canSort){
-               return <th key={i}>{column.colTitle}</th>
+               return (<th key={i}>{column.colTitle}</th>)
             }
         }
 
     });
 const tableHeadersRef = tOg.map((column,i)=> {
     if (!column.hidden) {
-        return <td key={i} style={this.props.bottomTableStyle}>
+        return (<td key={i} style={this.props.bottomTableStyle}>
             {
 
                 getDataFromDataset(column.id, this.state.pageOfItems, this.props.rowStyle)
             }
-        </td>
+        </td>)
     }
 });
 function getDataFromDataset(id, dataset, stz){
