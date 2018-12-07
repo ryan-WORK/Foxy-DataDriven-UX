@@ -21,33 +21,33 @@ export default class FoxyTables extends Component {
         this.state = { pager: {}, pageOfItems:[], tempData:[]};
         this.onChangePage = this.onChangePage.bind(this);
         // TODO: implement
-        // this.compareBy = this.compareBy.bind(this);
-        // this.sortBy = this.sortBy.bind(this);
+        this.compareBy = this.compareBy.bind(this);
+        this.sortBy = this.sortBy.bind(this);
     }
 // TODO: implement
-// compareBy(key) {
-//       console.log("compare by", key);
-//     return function (a, b) {
-//         console.log("compare", a,b);
-//         console.log("c",(a[key] < b[key]));
-//       if (a[key] < b[key]) return -1;
-//
-//       if (a[key] > b[key]) return 1;
-//       return 0;
-//     };
-//   }
+compareBy(key) {
+      console.log("compare by", key);
+    return function (a, b) {
+        console.log("compare", a,b);
+        console.log("c",(a[key] < b[key]));
+      if (a[key] < b[key]) return -1;
 
-// sortBy(key, stateData) {
-//     let arrayCopy = [...stateData];
-//     arrayCopy.sort(this.compareBy(key));
-//     console.log(arrayCopy);
-//     if(this.props.makePaginate){
-//         return this.setState({pageOfItems: arrayCopy});
-//     }
-//     if(!this.props.makePaginate) {
-//         return this.setState({tempData: arrayCopy});
-//     }
-//   }
+      if (a[key] > b[key]) return 1;
+      return 0;
+    };
+  }
+
+sortBy(key, stateData) {
+    let arrayCopy = [...stateData];
+    arrayCopy.sort(this.compareBy(key));
+    console.log(arrayCopy);
+    if(this.props.makePaginate){
+        return this.setState({pageOfItems: arrayCopy});
+    }
+    if(!this.props.makePaginate) {
+        return this.setState({tempData: arrayCopy});
+    }
+  }
 
        onChangePage(pageOfItems) {
         // update state with new page of items
@@ -152,13 +152,25 @@ export default class FoxyTables extends Component {
             'id': child.props.id,
             'colTitle': child.props.colTitle,
             'hidden': child.props.hidden,
-            'clicker': child.props.clicker
+            'clicker': child.props.clicker,
+            'canSort': child.props.canSort
         });
     }
       );
 const tableHeaders = tOg.map((column,i)=> {
         if (!column.hidden){
-            return <th key={i}>{column.colTitle}</th>
+            if(column.canSort){
+               return <th onClick={()=>this.sortBy(column.id, this.state.pageOfItems)} key={i}>{column.colTitle} <svg width={'10'} height={'10'} role="img" viewBox="0 0 24 24">
+                   <title>
+                       Strava icon
+                   </title>
+                   <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/>
+               </svg>
+               </th>
+            }
+            if(!column.canSort){
+               return <th key={i}>{column.colTitle}</th>
+            }
         }
 
     });
@@ -237,13 +249,25 @@ return dataset.map((column,i)=> {
             'id': child.props.id,
             'colTitle': child.props.colTitle,
             'hidden': child.props.hidden,
-            'clicker': child.props.clicker
+            'clicker': child.props.clicker,
+            'canSort': child.props.canSort
         });
     }
       );
 const tableHeaders = tOg.map((column,i)=> {
         if (!column.hidden){
-            return <th key={i}>{column.colTitle}</th>
+            if(column.canSort){
+               return <th onClick={()=>this.sortBy(column.id, this.state.tempData)} key={i}>{column.colTitle} <svg width={'10'} height={'10'} role="img" viewBox="0 0 24 24">
+                   <title>
+                       Strava icon
+                   </title>
+                   <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/>
+               </svg>
+               </th>
+            }
+            if(!column.canSort){
+               return <th key={i}>{column.colTitle}</th>
+            }
         }
 
     });

@@ -17,87 +17,94 @@ componentDidMount() {
         data:[
             {
             'pk':0,
-            'id': 'Szabi',
+            'id': 'Szabi0',
             'lastname':'title',
-            'jobt':'1 body inspector',
+            'jobt':'0 body inspector',
             'twitter': '@something0'
             },
              {
             'pk':3,
             'id': 'Szabi2',
             'lastname':'title',
-            'jobt':'2 body inspector',
+            'jobt':'3 body inspector',
             'twitter': '@something3'
             },
             {
             'pk':2,
-            'id': 'Szabi3',
+            'id': 'Szabi2',
             'lastname':'title',
-            'jobt':'3 body inspector',
+            'jobt':'2 body inspector',
             'twitter': '@something2'
             },
                         {
             'pk':4,
-            'id': 'Szabi',
+            'id': 'Szabi4',
             'lastname':'title',
-            'jobt':'1 body inspector',
+            'jobt':'4 body inspector',
             'twitter': '@something4'
             },
              {
             'pk':5,
-            'id': 'Szabi2',
+            'id': 'Szabi5',
             'lastname':'title',
-            'jobt':'2 body inspector',
+            'jobt':'5 body inspector',
             'twitter': '@something5'
             },
             {
             'pk':7,
-            'id': 'Szabi3',
+            'id': 'Szabi7',
             'lastname':'title',
-            'jobt':'3 body inspector',
+            'jobt':'7 body inspector',
             'twitter': '@something7'
             },
                         {
             'pk':6,
-            'id': 'Szabi',
+            'id': 'Szabi6',
             'lastname':'title',
-            'jobt':'1 body inspector',
+            'jobt':'6 body inspector',
             'twitter': '@something6'
             },
              {
             'pk':9,
             'id': 'Szabi9',
             'lastname':'title',
-            'jobt':'2 body inspector',
+            'jobt':'9 body inspector',
             'twitter': '@something9'
             },
             {
             'pk':8,
             'id': 'Szabi8',
             'lastname':'title',
-            'jobt':'3 body inspector',
+            'jobt':'8 body inspector',
             'twitter': '@something8'
             },
                         {
             'pk':10,
-            'id': 'Szabi',
+            'id': 'Szabi10',
             'lastname':'title',
-            'jobt':'1 body inspector',
-            'twitter': '@something1'
+            'jobt':'10 body inspector',
+            'twitter': '@something10'
             },
              {
             'pk':11,
-            'id': 'Szabi2',
+            'id': 'Szabi11',
             'lastname':'title',
-            'jobt':'2 body inspector',
-            'twitter': '@something2'
+            'jobt':'11 body inspector',
+            'twitter': '@something11'
             },
             {
             'pk':12,
-            'id': 'Szabi3',
+            'id': 'Szabi12',
             'lastname':'title',
-            'jobt':'3 body inspector',
-            'twitter': '@something3'
+            'jobt':'12 body inspector',
+            'twitter': '@something12'
+            },
+            {
+            'pk':1,
+            'id': 'Szabi1',
+            'lastname':'title',
+            'jobt':'1 body inspector',
+            'twitter': '@something1'
             },
         ]
     })
@@ -122,19 +129,21 @@ componentDidMount() {
     return (
       <div className="table">
                <FoxyTables tableCustomPaginate={false}
-                           // makePaginate={true}
+                           makePaginate={true}
                            items={dataProps}
                            bottomTableStyle={sb}
                            rowStyle={rs}
                            headerStyle={styles}>
               <FoxyColumn id={'jobt'}
+                          canSort={true}
                           colTitle={'Job Title'}
                           hidden={false}/>
-              <FoxyColumn id={'twitter'}
-                          colTitle={'Twitter'}
+              <FoxyColumn id={'id'}
+                          colTitle={'Name'}
                           hidden={false}/>
-              <FoxyColumn id={'lastname'}
-                          colTitle={'Last Name'}
+              <FoxyColumn id={'pk'}
+                          canSort={true}
+                          colTitle={'PK'}
                           hidden={false}/>
             </FoxyTables>
       </div>
