@@ -78,34 +78,34 @@ componentDidMount() {
             'jobt':'8 body inspector',
             'twitter': '@something8'
             },
-                        {
-            'pk':10,
-            'id': 'Szabi10',
-            'lastname':'title',
-            'jobt':'10 body inspector',
-            'twitter': '@something10'
-            },
-             {
-            'pk':11,
-            'id': 'Szabi11',
-            'lastname':'title',
-            'jobt':'11 body inspector',
-            'twitter': '@something11'
-            },
-            {
-            'pk':12,
-            'id': 'Szabi12',
-            'lastname':'title',
-            'jobt':'12 body inspector',
-            'twitter': '@something12'
-            },
-            {
-            'pk':1,
-            'id': 'Szabi1',
-            'lastname':'title',
-            'jobt':'1 body inspector',
-            'twitter': '@something1'
-            },
+            //             {
+            // 'pk':10,
+            // 'id': 'Szabi10',
+            // 'lastname':'title',
+            // 'jobt':'10 body inspector',
+            // 'twitter': '@something10'
+            // },
+            //  {
+            // 'pk':11,
+            // 'id': 'Szabi11',
+            // 'lastname':'title',
+            // 'jobt':'11 body inspector',
+            // 'twitter': '@something11'
+            // },
+            // {
+            // 'pk':12,
+            // 'id': 'Szabi12',
+            // 'lastname':'title',
+            // 'jobt':'12 body inspector',
+            // 'twitter': '@something12'
+            // },
+            // {
+            // 'pk':1,
+            // 'id': 'Szabi1',
+            // 'lastname':'title',
+            // 'jobt':'1 body inspector',
+            // 'twitter': '@something1'
+            // },
         ]
     })
   }
@@ -128,7 +128,9 @@ componentDidMount() {
   };
     return (
       <div className="table">
-               <FoxyTables tableCustomPaginate={false}
+          {
+           dataProps.length > 10?
+               (<FoxyTables tableCustomPaginate={false}
                            makePaginate={true}
                            items={dataProps}
                            // bottomTableStyle={sb}
@@ -146,7 +148,29 @@ componentDidMount() {
                           canSort={true}
                           colTitle={'PK'}
                           hidden={false}/>
-            </FoxyTables>
+            </FoxyTables>  )
+               :
+                (<FoxyTables tableCustomPaginate={false}
+                           // makePaginate={true}
+                           items={dataProps}
+                           // bottomTableStyle={sb}
+                           // rowStyle={rs}
+                           // headerStyle={styles}
+                   >
+              <FoxyColumn id={'jobt'}
+                          canSort={true}
+                          colTitle={'Job Title'}
+                          hidden={false}/>
+              <FoxyColumn id={'id'}
+                          colTitle={'Name'}
+                          hidden={false}/>
+              <FoxyColumn id={'pk'}
+                          canSort={true}
+                          colTitle={'PK'}
+                          hidden={false}/>
+            </FoxyTables>  )
+          }
+
       </div>
     );
   }

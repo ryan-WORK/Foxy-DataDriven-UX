@@ -96,9 +96,8 @@ sortBy(key, stateData) {
     getPager(totalItems, currentPage, pageSize) {
         // default to first page
         currentPage = currentPage || 1;
-         // default page size is 10
+         // default page size is
          pageSize = pageSize || 10;
-
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pageSize);
 
