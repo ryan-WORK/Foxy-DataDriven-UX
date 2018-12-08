@@ -129,7 +129,7 @@ componentDidMount() {
     return (
       <div className="table">
                 <FoxyTables items={dataProps}
-                    tableCustomPaginate={true}
+                    // tableCustomPaginate={true}
                     // makePaginate={true}
                            // bottomTableStyle={sb}
                            // rowStyle={rs}
