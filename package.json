@@ -12,8 +12,7 @@
     "start": "react-scripts start",
     "build": "NODE_ENV=production && rm -rf dist && mkdir dist && babel src/FoxyTable/ --out-dir dist --copy-files",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d docs"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
