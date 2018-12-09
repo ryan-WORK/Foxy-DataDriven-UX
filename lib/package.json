@@ -1,6 +1,6 @@
 {
   "name": "foxy-ui",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "homepage": "https://ryan-work.github.io/Foxy-DataDriven-UX/",
   "dependencies": {
     "prop-types": "^15.6.2",

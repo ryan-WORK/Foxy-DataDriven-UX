@@ -2,7 +2,7 @@
   "name": "docs",
   "homepage": "https://ryan-work.github.io/Foxy-DataDriven-UX/",
   "version": "0.1.0",
-  "private": true,
+//  "private": true,
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
