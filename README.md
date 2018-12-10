@@ -13,7 +13,7 @@ $ npm install foxy-ui
 
 or got to [GITHUB](https://github.com/ryan-WORK/Foxy-DataDriven-UX) for the source.
 
-Example right [here](https://ryan-work.github.io/Foxy-DataDriven-UX/)
+Example right [here](https://ryan-work.github.io/Foxy-React-UI/)
 
 ## example code 
 
