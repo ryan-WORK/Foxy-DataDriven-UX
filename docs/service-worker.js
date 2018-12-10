@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Foxy-DataDriven-UX/precache-manifest.37308908678cfec8171dace20c73a335.js"
+  "/Foxy-React-UI/precache-manifest.1b7e139bede1f456e95a4a1d80a6e002.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Foxy-DataDriven-UX/index.html", {
+workbox.routing.registerNavigationRoute("/Foxy-React-UI/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

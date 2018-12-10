@@ -1,15 +1,15 @@
 {
-  "main.css": "/Foxy-DataDriven-UX/static/css/main.3e4c223b.chunk.css",
-  "main.js": "/Foxy-DataDriven-UX/static/js/main.9da63262.chunk.js",
-  "main.js.map": "/Foxy-DataDriven-UX/static/js/main.9da63262.chunk.js.map",
-  "static/css/1.92987935.chunk.css": "/Foxy-DataDriven-UX/static/css/1.92987935.chunk.css",
-  "static/js/1.de8b0391.chunk.js": "/Foxy-DataDriven-UX/static/js/1.de8b0391.chunk.js",
-  "static/js/1.de8b0391.chunk.js.map": "/Foxy-DataDriven-UX/static/js/1.de8b0391.chunk.js.map",
-  "runtime~main.js": "/Foxy-DataDriven-UX/static/js/runtime~main.26f73fd5.js",
-  "runtime~main.js.map": "/Foxy-DataDriven-UX/static/js/runtime~main.26f73fd5.js.map",
-  "static/css/1.92987935.chunk.css.map": "/Foxy-DataDriven-UX/static/css/1.92987935.chunk.css.map",
-  "static/css/main.3e4c223b.chunk.css.map": "/Foxy-DataDriven-UX/static/css/main.3e4c223b.chunk.css.map",
-  "index.html": "/Foxy-DataDriven-UX/index.html",
-  "precache-manifest.37308908678cfec8171dace20c73a335.js": "/Foxy-DataDriven-UX/precache-manifest.37308908678cfec8171dace20c73a335.js",
-  "service-worker.js": "/Foxy-DataDriven-UX/service-worker.js"
+  "main.css": "/Foxy-React-UI/static/css/main.27908558.chunk.css",
+  "main.js": "/Foxy-React-UI/static/js/main.ca8c0f5a.chunk.js",
+  "main.js.map": "/Foxy-React-UI/static/js/main.ca8c0f5a.chunk.js.map",
+  "static/css/1.edf9cddb.chunk.css": "/Foxy-React-UI/static/css/1.edf9cddb.chunk.css",
+  "static/js/1.32e35954.chunk.js": "/Foxy-React-UI/static/js/1.32e35954.chunk.js",
+  "static/js/1.32e35954.chunk.js.map": "/Foxy-React-UI/static/js/1.32e35954.chunk.js.map",
+  "runtime~main.js": "/Foxy-React-UI/static/js/runtime~main.811dd0d8.js",
+  "runtime~main.js.map": "/Foxy-React-UI/static/js/runtime~main.811dd0d8.js.map",
+  "static/css/1.edf9cddb.chunk.css.map": "/Foxy-React-UI/static/css/1.edf9cddb.chunk.css.map",
+  "static/css/main.27908558.chunk.css.map": "/Foxy-React-UI/static/css/main.27908558.chunk.css.map",
+  "index.html": "/Foxy-React-UI/index.html",
+  "precache-manifest.1b7e139bede1f456e95a4a1d80a6e002.js": "/Foxy-React-UI/precache-manifest.1b7e139bede1f456e95a4a1d80a6e002.js",
+  "service-worker.js": "/Foxy-React-UI/service-worker.js"
 }
