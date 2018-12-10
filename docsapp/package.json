@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "gitrun": "cp -R ./public ../docs",
+    "gitrun": "cp -R ./build ../docs",
     "cleanup": "rm -rf ../docs",
     "build": "react-scripts build",
     "test": "react-scripts test",
